@@ -42,7 +42,7 @@ msgstr ""
 
 #. translators: %s: PHP version, e.g. 8.1.30
 #, php-format
-msgid "PHP %s is NOT patched."
+msgid "Your Server is running version %s. It is NOT patched."
 msgstr ""
 
 msgid ""
