@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PHP Patch Check package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PHP Patch Check 1.4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-22 00:00+0000\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: php-patch-check\n"
+
+msgid "Uninstall plugin"
+msgstr ""
+
+#. translators: %s: PHP version, e.g. 8.3.36
+#, php-format
+msgid "PHP %s is patched."
+msgstr ""
+
+msgid "Your server is protected against CVE-2026-109618 and CVE-2026-109619."
+msgstr ""
+
+#. translators: %s: PHP version, e.g. 8.3.6
+#, php-format
+msgid "PHP %s: status cannot be determined reliably."
+msgstr ""
+
+msgid ""
+"This PHP version most likely comes from the package manager of your server "
+"(e.g. Debian, Ubuntu or RHEL). Such packages are often patched without "
+"changing the version number, so your server may already be protected. Please"
+" ask your hosting provider whether the security updates of 21 October 2026 "
+"for CVE-2026-109618 and CVE-2026-109619 have been applied."
+msgstr ""
+
+#. translators: %s: PHP version, e.g. 8.1.30
+#, php-format
+msgid "PHP %s is NOT patched."
+msgstr ""
+
+msgid ""
+"Your hosting provider has not yet closed the vulnerabilities CVE-2026-109618"
+" and CVE-2026-109619. Patched versions are PHP 8.5.12, 8.4.27, 8.3.36 and "
+"8.2.35. Please contact your hosting provider or switch the PHP version."
+msgstr ""
+
+msgid "You do not have permission to do this."
+msgstr ""
