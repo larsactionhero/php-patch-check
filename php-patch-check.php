@@ -1,18 +1,19 @@
 <?php
 /**
  * Plugin Name: PHP Patch Check
- * Description: Shows a green, yellow or red notice telling you whether your PHP version is patched against CVE-2026-109618 / CVE-2026-109619.
- * Version: 1.4.0
- * Requires PHP: 7.0
+ * Description: Shows notice if your PHP version is patched against CVE-2026-109618 / CVE-2026-109619.
+ * Version: 1.0
+ * Requires PHP: 8.2.35
  * License: GPL-2.0-or-later
  * Text Domain: php-patch-check
  * Domain Path: /languages
+ * Author: Lars Ortlepp / larsactionhero.com
  */
 
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Minimum patched release per branch (PHP release of 2026-10-21):
+ * minimum patched release per branch (PHP release of 2026-10-21):
  * 8.5.12, 8.4.27, 8.3.36, 8.2.35. PHP 8.1 and older receive no official fix.
  */
 function ppc_patched_versions() {
@@ -35,18 +36,18 @@ function ppc_check( $major, $minor, $release, $extra = '' ) {
 		if ( (int) $release < $map[ $branch ] ) {
 			return false;
 		}
-		// Pre-releases (dev/alpha/beta/RC) of the fix release do not count as patched.
+		// pre-releases (dev/alpha/beta/RC) of the fix release do not count as patched.
 		if ( (int) $release === $map[ $branch ] && preg_match( '/dev|alpha|beta|rc/i', (string) $extra ) ) {
 			return false;
 		}
 		return true;
 	}
-	// Newer than 8.5 = patched; 8.1 and older = not patched.
+	// newer than 8.5 = patched; 8.1 and older = not patched
 	return version_compare( $branch, '8.5', '>' );
 }
 
 /**
- * Reads ID / ID_LIKE from /etc/os-release (empty string if unreadable, e.g. open_basedir).
+ * reads ID / ID_LIKE from /etc/os-release (empty string if unreadable, e.g. open_basedir).
  */
 function ppc_os_release_ids() {
 	$content = @is_readable( '/etc/os-release' ) ? @file_get_contents( '/etc/os-release' ) : false;
@@ -61,7 +62,7 @@ function ppc_os_release_ids() {
 }
 
 /**
- * Detects distribution packages (Debian, Ubuntu, RHEL family, SUSE, Remi/Sury ...).
+ * detects distribution packages (Debian, Ubuntu, RHEL family, SUSE, Remi/Sury ...).
  * These are often patched via backports without changing the version number.
  *
  * Detection (any match):
