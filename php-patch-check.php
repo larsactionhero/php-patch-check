@@ -125,7 +125,7 @@ function ppc_render_notice() {
 	} else {
 		$class = 'notice-error';
 		/* translators: %s: PHP version, e.g. 8.1.30 */
-		$title = sprintf( __( 'PHP %s is NOT patched.', 'php-patch-check' ), $version );
+		$title = sprintf( __( 'Your Server is running version %s. It is NOT patched.', 'php-patch-check' ), $version );
 		$text  = __( 'Your hosting provider has not yet closed the vulnerabilities CVE-2026-109618 and CVE-2026-109619. Patched versions are PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35. Please contact your hosting provider or switch the PHP version.', 'php-patch-check' );
 	}
 
