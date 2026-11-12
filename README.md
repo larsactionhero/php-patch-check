@@ -1,4 +1,4 @@
-# php-patch-check
+# Patch Check for PHP
 A WordPress plugin that displays a PHP security-status notice to administrators on every WordPress admin page. It checks whether the server’s PHP version is patched against <a href="https://www.cve.org/CVERecord?id=CVE-2026-109618" target="_blank">CVE-2026-109618</a> / <a href="https://www.cve.org/CVERecord?id=CVE-2026-109619" target="_blank">CVE-2026-109619</a>
 
 ## Status messages
@@ -29,4 +29,4 @@ Newer PHP branches count as patched. Package-managed PHP builds, such as those f
 
 ## Source
 
-[PHP Patch Check – plugin page](https://www.larsactionhero.com/git/php-patch-check/)
+[Patch Check for PHP – plugin page](https://www.larsactionhero.com/git/php-patch-check/)
